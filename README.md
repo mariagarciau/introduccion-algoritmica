@@ -1,4 +1,4 @@
-# introduccion-algoritmica-ejs1-7
+# introduccion-algoritmica
 Ejercicio 1: Sucesor de un DÍA de la semana
 
 
