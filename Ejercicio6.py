@@ -8,23 +8,23 @@ def descuento(microprocesadores=int(input("Cuantos microprocesadires has pedido 
             descuentoTotal+=1
         elif COMMAQ==True and BEL==True:
             descuentoTotal-=1
-    #elif microprocesadores>20000 and microprocesadores<=40000:
-        """if COMMAQ:
+    elif microprocesadores>20000 and microprocesadores<=40000:
+        if COMMAQ:
             descuentoTotal=13
         elif BEL:
             descuentoTotal=16
         elif COMMAQ and BEL:
             descuentoTotal=14
         elif not COMMAQ and not BEL:
-            descuentoTotal=15"""
-    #elif microprocesadores>40000:
-        #if COMMAQ:
-        """    descuentoTotal=18
+            descuentoTotal=15
+    elif microprocesadores>40000:
+        if COMMAQ:
+            descuentoTotal=18
         elif BEL:
             descuentoTotal=21
         elif COMMAQ and BEL:
             descuentoTotal=19
         elif not COMMAQ and not BEL:
-            descuentoTotal=20"""
+            descuentoTotal=20
     return print(descuentoTotal)
 descuento()
