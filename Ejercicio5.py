@@ -1,12 +1,11 @@
-def descuento(niños=int(input("Cuantos niños son"))):
-    precio=int(input("precio total"))
+def descuento(niños=int(input("Cuantos niños son "))):
     if niños==2:
-        precio= precio-precio*0.1
+        descuentoTotal=10
     elif niños==3:
-        precio= precio-precio*0.15
+        descuentoTotal=15
     elif niños==4:
-        precio= precio-precio*0.18
+        descuentoTotal=18
     elif niños>=5:
-        precio=precio-precio*0.18-(niños-4)*0.01
-    return print(precio)
+        descuentoTotal=18+(niños-4)*1
+    return print(descuentoTotal)
 descuento()
