@@ -1,30 +1,29 @@
-def descuento(microprocesadores=int(input("Cuantos microprocesadires has pedido ")),
-    COMMAQ=bool(input("Eres cliente COMMAQ ")),BEL=bool(input("Eres cliente BEL "))):
+def descuento(microprocesadores=int(input("Cuantos microprocesadires has pedido "))):
+    COMMAQ=str(input("Eres cliente COMMAQ "))
+    BEL=str(input("Eres cliente BEL "))
     if microprocesadores>=10000 and microprocesadores<=20000:
         descuentoTotal=10
-        if COMMAQ==True and BEL==False:
+        if COMMAQ=="si" and BEL=="no":
             descuentoTotal-=2
-        elif BEL==True and COMMAQ==False:
+        elif COMMAQ=="no" and BEL=="si" :
             descuentoTotal+=1
-        elif COMMAQ==True and BEL==True:
+        elif COMMAQ=="si" and BEL=="si":
             descuentoTotal-=1
     elif microprocesadores>20000 and microprocesadores<=40000:
-        if COMMAQ:
-            descuentoTotal=13
-        elif BEL:
-            descuentoTotal=16
-        elif COMMAQ and BEL:
-            descuentoTotal=14
-        elif not COMMAQ and not BEL:
-            descuentoTotal=15
+        descuentoTotal=15
+        if COMMAQ=="si" and BEL=="no":
+            descuentoTotal-=2
+        elif COMMAQ=="no" and BEL=="si" :
+            descuentoTotal+=1
+        elif COMMAQ=="si" and BEL=="si":
+            descuentoTotal-=1
     elif microprocesadores>40000:
-        if COMMAQ:
-            descuentoTotal=18
-        elif BEL:
-            descuentoTotal=21
-        elif COMMAQ and BEL:
-            descuentoTotal=19
-        elif not COMMAQ and not BEL:
-            descuentoTotal=20
+        descuentoTotal=20
+        if COMMAQ=="si" and BEL=="no":
+            descuentoTotal-=2
+        elif COMMAQ=="no" and BEL=="si" :
+            descuentoTotal+=1
+        elif COMMAQ=="si" and BEL=="si":
+            descuentoTotal-=1
     return print(descuentoTotal)
 descuento()
